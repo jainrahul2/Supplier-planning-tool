@@ -1,0 +1,207 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <display-name>SPT</display-name>
+  <display-name>Supply Management</display-name>
+  <context-param>
+    <param-name>jdbcURL</param-name>
+    <param-value>jdbc:sqlserver://supplychain-latest.ctp4kn24iwvj.us-east-1.rds.amazonaws.com:1433</param-value>
+  </context-param>
+  <context-param>
+    <param-name>jdbcUsername</param-name>
+    <param-value>sqladmin</param-value>
+  </context-param>
+  <context-param>
+    <param-name>jdbcPassword</param-name>
+    <param-value>sqladmin2017</param-value>
+  </context-param>
+  <welcome-file-list>   
+   <welcome-file>index.jsp</welcome-file>   
+  </welcome-file-list> 
+  
+  <servlet>
+    <servlet-name>ControllerServlet</servlet-name>
+    <servlet-class>net.codejava.javaee.brand.ControllerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControllerServlet</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ControllerServletCategory</servlet-name>
+    <servlet-class>net.codejava.javaee.brand.ControllerServletCategory</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControllerServletCategory</servlet-name>
+    <url-pattern>/listCategory</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ControllerServletSupplier</servlet-name>
+    <servlet-class>net.codejava.javaee.brand.ControllerServletSupplier</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControllerServletSupplier</servlet-name>
+    <url-pattern>/supplierList</url-pattern>
+  </servlet-mapping> 
+  <servlet>
+    <servlet-name>ControllerServletUserManagement</servlet-name>
+    <servlet-class>net.codejava.javaee.brand.ControllerServletUserManagement</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControllerServletUserManagement</servlet-name>
+    <url-pattern>/listuser</url-pattern>
+  </servlet-mapping> 
+  <servlet>
+    <servlet-name>ControllerServletControlOffice</servlet-name>
+    <servlet-class>net.codejava.javaee.brand.ControllerServletControlOffice</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControllerServletControlOffice</servlet-name>
+    <url-pattern>/controllist</url-pattern>
+  </servlet-mapping> 
+   <servlet>
+    <servlet-name>ControllerServletCountryList</servlet-name>
+    <servlet-class>net.codejava.javaee.brand.ControllerServletCountryList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControllerServletCountryList</servlet-name>
+    <url-pattern>/countrylist</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+    <servlet-name>ControllerServletFiscalCalendar</servlet-name>
+    <servlet-class>net.codejava.javaee.brand.ControllerServletFiscalCalendar</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControllerServletFiscalCalendar</servlet-name>
+    <url-pattern>/listfiscalcalendar</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>ControllerServletLockingDate</servlet-name>
+    <servlet-class>net.codejava.javaee.brand.ControllerServletLockingDate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControllerServletLockingDate</servlet-name>
+    <url-pattern>/lockingdateList</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <servlet-name>ControllerServletMDSEList</servlet-name>
+    <servlet-class>net.codejava.javaee.brand.ControllerServletMDSEList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControllerServletMDSEList</servlet-name>
+    <url-pattern>/listmdselist</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>UploadServlet</servlet-name>
+    <servlet-class>net.codejava.javaee.brand.UploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadServlet</servlet-name>
+    <url-pattern>/UploadServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ControllerServletUserSetting</servlet-name>
+    <servlet-class>net.codejava.javaee.brand.ControllerServletUserSetting</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControllerServletUserSetting</servlet-name>
+    <url-pattern>/updateusersetting</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>UploadServletDIAS</servlet-name>
+    <servlet-class>net.codejava.javaee.brand.UploadServletDIAS</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadServletDIAS</servlet-name>
+    <url-pattern>/UploadServletDIAS</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+ <!--  <error-page>
+    <exception-type>java.lang.Exception</exception-type>
+    <location>/Error.jsp</location>
+  </error-page> -->
+ <!--  <servlet>
+    <description>JAX-RS Tools Generated - Do not modify</description>
+    <servlet-name>JAX-RS Servlet</servlet-name>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JAX-RS Servlet</servlet-name>
+    <url-pattern>/jaxrs/*</url-pattern>
+  </servlet-mapping> -->
+  <servlet-mapping>
+  <servlet-name>default</servlet-name>
+  <url-pattern>*.css</url-pattern>
+ </servlet-mapping>
+
+ <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.js</url-pattern>
+ </servlet-mapping>
+
+
+ 
+ <servlet-mapping>
+  <servlet-name>default</servlet-name>
+  <url-pattern>*.eot</url-pattern>
+ </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>default</servlet-name>
+  <url-pattern>*.svg</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>default</servlet-name>
+  <url-pattern>*.woff</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>default</servlet-name>
+  <url-pattern>*.woff2</url-pattern>
+ </servlet-mapping>
+
+<servlet-mapping>
+  <servlet-name>default</servlet-name>
+  <url-pattern>*.png</url-pattern>
+ </servlet-mapping>
+ 
+ 
+ 
+ 
+ 
+<context-param>
+    <param-name>host</param-name>
+    <param-value>outlook.office365.com</param-value>
+</context-param>
+ 
+<context-param>
+    <param-name>port</param-name>
+    <param-value>993</param-value>
+</context-param>
+ 
+<context-param>
+    <param-name>email</param-name>
+    <param-value>rjain6@jcp.com</param-value>
+</context-param>
+<context-param>
+    <param-name>name</param-name>
+    <param-value>Rahul Jain</param-value>
+</context-param>
+<context-param>
+    <param-name>pass</param-name>
+    <param-value>Test$123user3</param-value>
+</context-param>
+
+</web-app>
